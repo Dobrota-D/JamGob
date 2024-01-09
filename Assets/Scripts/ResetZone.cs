@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeadZone : MonoBehaviour
 {
+    [SerializeField]
     private Vector3 _startPosition;
 
     private Quaternion _startRotation;
@@ -25,6 +26,7 @@ public class DeadZone : MonoBehaviour
             other.transform.rotation = _startRotation;
             _rigideBody.velocity = Vector3.zero;
             _rigideBody.angularVelocity = Vector3.zero;
+
         }
     }
 }
