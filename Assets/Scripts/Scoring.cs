@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Scoring : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Cane points given to the player 100 points
+    [SerializeField]
+    private int _points = 100;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    //it a cane touches the trigger, it will add points to the score in the game manager
+    void OnTriggerEnter(Collider other)
     {
         
+
+        if (other.CompareTag("cane"))
+        {
+            Debug.Log("Cane hit the trigger");
+            GameManager.Instance.IncreaseScore(_points);
+        }
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3876335760365736336}
   m_Layer: 0
   m_Name: Cane
-  m_TagString: Untagged
+  m_TagString: cane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f446706ec2f0fb84ba4df6b098479d03, type: 3}
       propertyPath: m_Name
       value: AST_GRAPH_Conserve_1_GJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f446706ec2f0fb84ba4df6b098479d03, type: 3}
+      propertyPath: m_TagString
+      value: cane
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

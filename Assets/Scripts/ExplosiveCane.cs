@@ -22,7 +22,7 @@ public class ExplosiveCane : MonoBehaviour
             Collider[] colliders = Physics.OverlapSphere(explosionPosition, radius);
             foreach (Collider hit in colliders)
             {
-                Debug.Log(hit, hit);
+                
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
