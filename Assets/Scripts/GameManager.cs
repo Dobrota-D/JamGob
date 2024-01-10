@@ -41,12 +41,12 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        _scoreText.text = "Score: " + Score;
+        _scoreText.text = Score + " Score";
     }
 
     public void UpdateMultiplierText()
     {
-        _multiplierText.text = "Multiplier: " + Multiplier;
+        _multiplierText.text =  Multiplier + "X";
     }
 
     public void IncreaseScore(int amount)
