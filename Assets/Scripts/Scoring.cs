@@ -8,20 +8,16 @@ public class Scoring : MonoBehaviour
     [SerializeField]
     private int _points = 100;
 
-    private void Start()
-    {
-        
-    }
+    public ParticleSystem dust;
 
     //it a cane touches the trigger, it will add points to the score in the game manager
     void OnTriggerEnter(Collider other)
     {
-        
-
         if (other.CompareTag("cane"))
         {
-            Debug.Log("Cane hit the trigger");
             GameManager.Instance.IncreaseScore(_points);
         }
     }
+
+   
 }

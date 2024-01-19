@@ -8,6 +8,9 @@ TagManager:
   - projectile
   - ball
   - cane
+  - ground
+  - caneReset
+  - caneX
   layers:
   - Default
   - TransparentFX

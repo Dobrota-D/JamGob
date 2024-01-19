@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ResetCane : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //This cane will reset the multiplier to 1
+    public int multiplier = 1;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("ball"))
+        {
+            //reset the multiplier to 1
+            GameManager.Instance.Multiplier = multiplier;
+
+            //make the cane disappear
+            gameObject.SetActive(false);
+        }
     }
 }

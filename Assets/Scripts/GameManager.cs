@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -27,15 +28,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Score = 0;
+        Score = -200;
         Multiplier = 1;
-        UpdateScoreText();
-        UpdateMultiplierText();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateMultiplierText();
+        UpdateScoreText();
+        
         
     }
 
@@ -55,9 +58,7 @@ public class GameManager : MonoBehaviour
         UpdateScoreText();
     }
 
-    // reset the scene 
-    public void Reset()
-    {
-        SceneManager.LoadScene("Main");
-    }
+  
+
+    
 }

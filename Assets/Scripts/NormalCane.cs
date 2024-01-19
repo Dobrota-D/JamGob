@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class NormalCane : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource soundPlay;
 
-    // Update is called once per frame
-    void Update()
+    //if the cane hits the ground, play the sound
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("ball"))
+        {
+            soundPlay.Play();
+        }
     }
 }
